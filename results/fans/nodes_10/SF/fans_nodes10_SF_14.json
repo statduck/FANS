@@ -1,0 +1,242 @@
+{
+  "dataset_info": {
+    "seed": 85,
+    "dataset_index": 14,
+    "node_count": 10,
+    "edge_count": 10,
+    "graph_type": "SF",
+    "shifted_nodes": [
+      9,
+      3
+    ],
+    "shift_types": {
+      "9": "function",
+      "3": "noise_skew"
+    },
+    "shift_case": "function_noise_skew"
+  },
+  "model": "fans",
+  "config_name": "SF",
+  "dag_structure": "standard",
+  "device": "cuda:0",
+  "fans": {
+    "true_shifted_nodes": [
+      9,
+      3
+    ],
+    "detected_shifted_nodes": [
+      3,
+      9
+    ],
+    "detected_shifted_nodes_prob_log": [
+      3,
+      9
+    ],
+    "detected_shifted_nodes_prob": [
+      0.3552594972245778,
+      0.7029305495149837
+    ],
+    "detected_shifted_nodes_x": [
+      {
+        "node": 1,
+        "avg_js": 0.05653269037068051,
+        "shift_detected": false
+      },
+      {
+        "node": 2,
+        "avg_js": 0.03944909017111731,
+        "shift_detected": false
+      },
+      {
+        "node": 3,
+        "avg_js": 0.3552594972245778,
+        "shift_detected": true
+      },
+      {
+        "node": 4,
+        "avg_js": 0.035536420643014266,
+        "shift_detected": false
+      },
+      {
+        "node": 5,
+        "avg_js": 0.05114710985597686,
+        "shift_detected": false
+      },
+      {
+        "node": 6,
+        "avg_js": 0.03507645458605652,
+        "shift_detected": false
+      },
+      {
+        "node": 7,
+        "avg_js": 0.037088150588964156,
+        "shift_detected": false
+      },
+      {
+        "node": 8,
+        "avg_js": 0.02914452318677706,
+        "shift_detected": false
+      },
+      {
+        "node": 9,
+        "avg_js": 0.7029305495149837,
+        "shift_detected": true
+      }
+    ],
+    "node_js_details": {
+      "X1|pa(X1)": {
+        "quantile_js_values": [
+          0.05653268968583438,
+          0.056532689873056624,
+          0.056532691553150514
+        ],
+        "avg_js_divergence": 0.05653269037068051,
+        "shift_detected": false,
+        "node_idx": 1
+      },
+      "X2|pa(X2)": {
+        "quantile_js_values": [
+          0.03944909023492234,
+          0.03944909062225355,
+          0.03944908965617602
+        ],
+        "avg_js_divergence": 0.03944909017111731,
+        "shift_detected": false,
+        "node_idx": 2
+      },
+      "X3|pa(X3)": {
+        "quantile_js_values": [
+          0.35387162546673295,
+          0.355959222663119,
+          0.35594764354388136
+        ],
+        "avg_js_divergence": 0.3552594972245778,
+        "shift_detected": true,
+        "node_idx": 3
+      },
+      "X4|pa(X4)": {
+        "quantile_js_values": [
+          0.035536422280358915,
+          0.035536417663802757,
+          0.03553642198488113
+        ],
+        "avg_js_divergence": 0.035536420643014266,
+        "shift_detected": false,
+        "node_idx": 4
+      },
+      "X5|pa(X5)": {
+        "quantile_js_values": [
+          0.0522183040530785,
+          0.05116855157585836,
+          0.050054473938993725
+        ],
+        "avg_js_divergence": 0.05114710985597686,
+        "shift_detected": false,
+        "node_idx": 5
+      },
+      "X6|pa(X6)": {
+        "quantile_js_values": [
+          0.03507645320833513,
+          0.03507645590810378,
+          0.03507645464173066
+        ],
+        "avg_js_divergence": 0.03507645458605652,
+        "shift_detected": false,
+        "node_idx": 6
+      },
+      "X7|pa(X7)": {
+        "quantile_js_values": [
+          0.037947626813712804,
+          0.037009124563595966,
+          0.0363077003895837
+        ],
+        "avg_js_divergence": 0.037088150588964156,
+        "shift_detected": false,
+        "node_idx": 7
+      },
+      "X8|pa(X8)": {
+        "quantile_js_values": [
+          0.031537581014794605,
+          0.02979724130595375,
+          0.026098747239582838
+        ],
+        "avg_js_divergence": 0.02914452318677706,
+        "shift_detected": false,
+        "node_idx": 8
+      },
+      "X9|pa(X9)": {
+        "quantile_js_values": [
+          0.7035677260667498,
+          0.7022389980267802,
+          0.7029849244514209
+        ],
+        "avg_js_divergence": 0.7029305495149837,
+        "shift_detected": true,
+        "node_idx": 9
+      }
+    },
+    "shifted_nodes_independence": {
+      "correctly_detected": {
+        "nodes": [
+          9,
+          3
+        ],
+        "independence_results": {
+          "node_results": {
+            "9": {
+              "node_idx": 9,
+              "parent_count": 1,
+              "dependent_parents": [
+                7
+              ],
+              "independent_parents": [],
+              "dependent_ratio": 1.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 7,
+                  "spearman": {
+                    "correlation": -0.0918917478917479,
+                    "p_value": 0.0036329127184868853,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                }
+              ]
+            },
+            "3": {
+              "node_idx": 3,
+              "parent_count": 1,
+              "dependent_parents": [
+                1
+              ],
+              "independent_parents": [],
+              "dependent_ratio": 1.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 1,
+                  "spearman": {
+                    "correlation": 0.11625845625845627,
+                    "p_value": 0.00022931685308244984,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                }
+              ]
+            }
+          },
+          "avg_dependent_ratio": 1.0,
+          "node_count": 2
+        },
+        "avg_dependent_ratio": 1.0
+      },
+      "missed_nodes": {
+        "nodes": [],
+        "independence_results": {
+          "node_results": {},
+          "avg_dependent_ratio": 0
+        },
+        "avg_dependent_ratio": 0
+      }
+    }
+  }
+}

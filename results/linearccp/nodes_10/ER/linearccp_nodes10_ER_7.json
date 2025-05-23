@@ -1,0 +1,173 @@
+{
+  "dataset_info": {
+    "seed": 48,
+    "dataset_index": 7,
+    "node_count": 10,
+    "edge_count": 10,
+    "graph_type": "ER",
+    "shifted_nodes": [
+      6,
+      8
+    ],
+    "shift_types": {
+      "6": "function",
+      "8": "noise_std"
+    },
+    "shift_case": "function_noise_std"
+  },
+  "model": "linearccp",
+  "config_name": "ER",
+  "dag_structure": "standard",
+  "device": "cpu",
+  "linearccp": {
+    "shifted_nodes": [
+      6,
+      8
+    ],
+    "functional_change_nodes": [
+      6,
+      8
+    ],
+    "noise_change_nodes": [
+      6
+    ],
+    "node_results": {
+      "4": {
+        "is_shifted": false,
+        "parents": [
+          1,
+          3
+        ],
+        "function_test": {
+          "f_statistic": 0.8065005511636325,
+          "p_value": 0.4465631180681805,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.020482325167254067,
+            0.05093224812762915
+          ],
+          "beta_env2": [
+            0.038236173813940184,
+            0.00982338080222623
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.026,
+          "p_value": 0.8881734182535203,
+          "is_noise_changed": false
+        }
+      },
+      "5": {
+        "is_shifted": false,
+        "parents": [
+          4
+        ],
+        "function_test": {
+          "f_statistic": 0.012597294686445973,
+          "p_value": 0.9106462468849332,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.22718363319694218
+          ],
+          "beta_env2": [
+            0.23184550146256644
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.03,
+          "p_value": 0.7593695685682871,
+          "is_noise_changed": false
+        }
+      },
+      "6": {
+        "is_shifted": true,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 347.73008541862555,
+          "p_value": 1.1102230246251565e-16,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.03746717057384915
+          ],
+          "beta_env2": [
+            2.4564017651233923
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.336,
+          "p_value": 2.1379657348599523e-50,
+          "is_noise_changed": true
+        }
+      },
+      "7": {
+        "is_shifted": false,
+        "parents": [
+          1,
+          3
+        ],
+        "function_test": {
+          "f_statistic": 0.3740130437822927,
+          "p_value": 0.6880161909393933,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.024622927992145244,
+            -0.008764287100556057
+          ],
+          "beta_env2": [
+            0.024304502431605902,
+            -0.007790180796541771
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.034,
+          "p_value": 0.6101664688189142,
+          "is_noise_changed": false
+        }
+      },
+      "8": {
+        "is_shifted": true,
+        "parents": [
+          3,
+          4,
+          5,
+          7
+        ],
+        "function_test": {
+          "f_statistic": 4.791679716940356,
+          "p_value": 0.0007564339184913393,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.8348680937514467,
+            0.6566642662736796,
+            0.9735074195346083,
+            0.6167144264640064
+          ],
+          "beta_env2": [
+            0.6088643261211565,
+            0.545066113892922,
+            0.9085449456606198,
+            0.46388246550128204
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.047,
+          "p_value": 0.21939649929677082,
+          "is_noise_changed": false
+        }
+      }
+    },
+    "metrics": {
+      "true_positives": [
+        6,
+        8
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    }
+  }
+}

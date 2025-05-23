@@ -1,0 +1,242 @@
+{
+  "dataset_info": {
+    "seed": 77,
+    "dataset_index": 6,
+    "node_count": 10,
+    "edge_count": 10,
+    "graph_type": "SF",
+    "shifted_nodes": [
+      3,
+      6
+    ],
+    "shift_types": {
+      "3": "noise_skew",
+      "6": "noise_skew"
+    },
+    "shift_case": "noise_skew_noise_skew"
+  },
+  "model": "fans",
+  "config_name": "SF",
+  "dag_structure": "standard",
+  "device": "cuda:0",
+  "fans": {
+    "true_shifted_nodes": [
+      3,
+      6
+    ],
+    "detected_shifted_nodes": [
+      3,
+      6
+    ],
+    "detected_shifted_nodes_prob_log": [
+      3,
+      6
+    ],
+    "detected_shifted_nodes_prob": [
+      0.34313714814929225,
+      0.3540611263194486
+    ],
+    "detected_shifted_nodes_x": [
+      {
+        "node": 1,
+        "avg_js": 0.03762548793910101,
+        "shift_detected": false
+      },
+      {
+        "node": 2,
+        "avg_js": 0.03942054740735365,
+        "shift_detected": false
+      },
+      {
+        "node": 3,
+        "avg_js": 0.34313714814929225,
+        "shift_detected": true
+      },
+      {
+        "node": 4,
+        "avg_js": 0.023220716593685086,
+        "shift_detected": false
+      },
+      {
+        "node": 5,
+        "avg_js": 0.03392380392763216,
+        "shift_detected": false
+      },
+      {
+        "node": 6,
+        "avg_js": 0.3540611263194486,
+        "shift_detected": true
+      },
+      {
+        "node": 7,
+        "avg_js": 0.04005969540309682,
+        "shift_detected": false
+      },
+      {
+        "node": 8,
+        "avg_js": 0.03981659776941169,
+        "shift_detected": false
+      },
+      {
+        "node": 9,
+        "avg_js": 0.03634678239660005,
+        "shift_detected": false
+      }
+    ],
+    "node_js_details": {
+      "X1|pa(X1)": {
+        "quantile_js_values": [
+          0.03762548742496579,
+          0.037625488927748425,
+          0.03762548746458883
+        ],
+        "avg_js_divergence": 0.03762548793910101,
+        "shift_detected": false,
+        "node_idx": 1
+      },
+      "X2|pa(X2)": {
+        "quantile_js_values": [
+          0.03845779995194169,
+          0.03954691192904364,
+          0.040256930341075615
+        ],
+        "avg_js_divergence": 0.03942054740735365,
+        "shift_detected": false,
+        "node_idx": 2
+      },
+      "X3|pa(X3)": {
+        "quantile_js_values": [
+          0.3420586175763536,
+          0.34353374474839116,
+          0.34381908212313195
+        ],
+        "avg_js_divergence": 0.34313714814929225,
+        "shift_detected": true,
+        "node_idx": 3
+      },
+      "X4|pa(X4)": {
+        "quantile_js_values": [
+          0.023658804966049524,
+          0.023314555436788707,
+          0.02268878937821703
+        ],
+        "avg_js_divergence": 0.023220716593685086,
+        "shift_detected": false,
+        "node_idx": 4
+      },
+      "X5|pa(X5)": {
+        "quantile_js_values": [
+          0.03611922496603585,
+          0.029985654447971077,
+          0.03566653236888956
+        ],
+        "avg_js_divergence": 0.03392380392763216,
+        "shift_detected": false,
+        "node_idx": 5
+      },
+      "X6|pa(X6)": {
+        "quantile_js_values": [
+          0.35406112793746164,
+          0.35406112582865545,
+          0.35406112519222865
+        ],
+        "avg_js_divergence": 0.3540611263194486,
+        "shift_detected": true,
+        "node_idx": 6
+      },
+      "X7|pa(X7)": {
+        "quantile_js_values": [
+          0.04066087698320959,
+          0.040164623647408124,
+          0.039353585578672745
+        ],
+        "avg_js_divergence": 0.04005969540309682,
+        "shift_detected": false,
+        "node_idx": 7
+      },
+      "X8|pa(X8)": {
+        "quantile_js_values": [
+          0.04082568563128582,
+          0.039891036340482765,
+          0.03873307133646648
+        ],
+        "avg_js_divergence": 0.03981659776941169,
+        "shift_detected": false,
+        "node_idx": 8
+      },
+      "X9|pa(X9)": {
+        "quantile_js_values": [
+          0.03498173321085406,
+          0.035878183438773074,
+          0.038180430540173026
+        ],
+        "avg_js_divergence": 0.03634678239660005,
+        "shift_detected": false,
+        "node_idx": 9
+      }
+    },
+    "shifted_nodes_independence": {
+      "correctly_detected": {
+        "nodes": [
+          3,
+          6
+        ],
+        "independence_results": {
+          "node_results": {
+            "3": {
+              "node_idx": 3,
+              "parent_count": 1,
+              "dependent_parents": [],
+              "independent_parents": [
+                1
+              ],
+              "dependent_ratio": 0.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 1,
+                  "spearman": {
+                    "correlation": -0.041541413541413545,
+                    "p_value": 0.18932504032987188,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                }
+              ]
+            },
+            "6": {
+              "node_idx": 6,
+              "parent_count": 1,
+              "dependent_parents": [
+                0
+              ],
+              "independent_parents": [],
+              "dependent_ratio": 1.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 0,
+                  "spearman": {
+                    "correlation": 0.09744433344433345,
+                    "p_value": 0.0020358599718576075,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                }
+              ]
+            }
+          },
+          "avg_dependent_ratio": 0.5,
+          "node_count": 2
+        },
+        "avg_dependent_ratio": 0.5
+      },
+      "missed_nodes": {
+        "nodes": [],
+        "independence_results": {
+          "node_results": {},
+          "avg_dependent_ratio": 0
+        },
+        "avg_dependent_ratio": 0
+      }
+    }
+  }
+}

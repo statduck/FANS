@@ -1,0 +1,242 @@
+{
+  "dataset_info": {
+    "seed": 99,
+    "dataset_index": 28,
+    "node_count": 10,
+    "edge_count": 10,
+    "graph_type": "SF",
+    "shifted_nodes": [
+      5,
+      8
+    ],
+    "shift_types": {
+      "5": "noise_std",
+      "8": "noise_skew"
+    },
+    "shift_case": "noise_std_noise_skew"
+  },
+  "model": "fans",
+  "config_name": "SF",
+  "dag_structure": "standard",
+  "device": "cuda:0",
+  "fans": {
+    "true_shifted_nodes": [
+      5,
+      8
+    ],
+    "detected_shifted_nodes": [
+      5,
+      8
+    ],
+    "detected_shifted_nodes_prob_log": [
+      5,
+      8
+    ],
+    "detected_shifted_nodes_prob": [
+      0.15142179372672424,
+      0.34689355455073106
+    ],
+    "detected_shifted_nodes_x": [
+      {
+        "node": 1,
+        "avg_js": 0.02490666337181166,
+        "shift_detected": false
+      },
+      {
+        "node": 2,
+        "avg_js": 0.03890113481378659,
+        "shift_detected": false
+      },
+      {
+        "node": 3,
+        "avg_js": 0.04958587012456003,
+        "shift_detected": false
+      },
+      {
+        "node": 4,
+        "avg_js": 0.030307580917593793,
+        "shift_detected": false
+      },
+      {
+        "node": 5,
+        "avg_js": 0.15142179372672424,
+        "shift_detected": true
+      },
+      {
+        "node": 6,
+        "avg_js": 0.04925665408687815,
+        "shift_detected": false
+      },
+      {
+        "node": 7,
+        "avg_js": 0.046581010241368626,
+        "shift_detected": false
+      },
+      {
+        "node": 8,
+        "avg_js": 0.34689355455073106,
+        "shift_detected": true
+      },
+      {
+        "node": 9,
+        "avg_js": 0.05442335004550806,
+        "shift_detected": false
+      }
+    ],
+    "node_js_details": {
+      "X1|pa(X1)": {
+        "quantile_js_values": [
+          0.024906664270054855,
+          0.024906663363051355,
+          0.024906662482328767
+        ],
+        "avg_js_divergence": 0.02490666337181166,
+        "shift_detected": false,
+        "node_idx": 1
+      },
+      "X2|pa(X2)": {
+        "quantile_js_values": [
+          0.038901133255013355,
+          0.03890113379013461,
+          0.03890113739621181
+        ],
+        "avg_js_divergence": 0.03890113481378659,
+        "shift_detected": false,
+        "node_idx": 2
+      },
+      "X3|pa(X3)": {
+        "quantile_js_values": [
+          0.04958587100185118,
+          0.049585869429036054,
+          0.04958586994279287
+        ],
+        "avg_js_divergence": 0.04958587012456003,
+        "shift_detected": false,
+        "node_idx": 3
+      },
+      "X4|pa(X4)": {
+        "quantile_js_values": [
+          0.030307580988691445,
+          0.030307580686575297,
+          0.03030758107751463
+        ],
+        "avg_js_divergence": 0.030307580917593793,
+        "shift_detected": false,
+        "node_idx": 4
+      },
+      "X5|pa(X5)": {
+        "quantile_js_values": [
+          0.15142179370792488,
+          0.1514217943147216,
+          0.15142179315752619
+        ],
+        "avg_js_divergence": 0.15142179372672424,
+        "shift_detected": true,
+        "node_idx": 5
+      },
+      "X6|pa(X6)": {
+        "quantile_js_values": [
+          0.051609145656093924,
+          0.049321701531580935,
+          0.046839115072959556
+        ],
+        "avg_js_divergence": 0.04925665408687815,
+        "shift_detected": false,
+        "node_idx": 6
+      },
+      "X7|pa(X7)": {
+        "quantile_js_values": [
+          0.046581011415241735,
+          0.04658100817414085,
+          0.04658101113472328
+        ],
+        "avg_js_divergence": 0.046581010241368626,
+        "shift_detected": false,
+        "node_idx": 7
+      },
+      "X8|pa(X8)": {
+        "quantile_js_values": [
+          0.34405308284304936,
+          0.3481753014491649,
+          0.3484522793599789
+        ],
+        "avg_js_divergence": 0.34689355455073106,
+        "shift_detected": true,
+        "node_idx": 8
+      },
+      "X9|pa(X9)": {
+        "quantile_js_values": [
+          0.05352379153595276,
+          0.054844223949209424,
+          0.054902034651361994
+        ],
+        "avg_js_divergence": 0.05442335004550806,
+        "shift_detected": false,
+        "node_idx": 9
+      }
+    },
+    "shifted_nodes_independence": {
+      "correctly_detected": {
+        "nodes": [
+          8,
+          5
+        ],
+        "independence_results": {
+          "node_results": {
+            "8": {
+              "node_idx": 8,
+              "parent_count": 1,
+              "dependent_parents": [],
+              "independent_parents": [
+                1
+              ],
+              "dependent_ratio": 0.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 1,
+                  "spearman": {
+                    "correlation": 0.02710861510861511,
+                    "p_value": 0.3918125772930613,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                }
+              ]
+            },
+            "5": {
+              "node_idx": 5,
+              "parent_count": 1,
+              "dependent_parents": [],
+              "independent_parents": [
+                0
+              ],
+              "dependent_ratio": 0.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 0,
+                  "spearman": {
+                    "correlation": -0.022801222801222803,
+                    "p_value": 0.47138352389608285,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                }
+              ]
+            }
+          },
+          "avg_dependent_ratio": 0.0,
+          "node_count": 2
+        },
+        "avg_dependent_ratio": 0.0
+      },
+      "missed_nodes": {
+        "nodes": [],
+        "independence_results": {
+          "node_results": {},
+          "avg_dependent_ratio": 0
+        },
+        "avg_dependent_ratio": 0
+      }
+    }
+  }
+}

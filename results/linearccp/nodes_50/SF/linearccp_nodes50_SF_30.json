@@ -1,0 +1,1214 @@
+{
+  "dataset_info": {
+    "seed": 341,
+    "dataset_index": 30,
+    "node_count": 50,
+    "edge_count": 50,
+    "graph_type": "SF",
+    "shifted_nodes": [
+      11,
+      10,
+      13,
+      43,
+      9,
+      23,
+      26,
+      12,
+      4,
+      16
+    ],
+    "shift_types": {
+      "11": "noise_skew",
+      "10": "noise_skew",
+      "13": "noise_skew",
+      "43": "noise_skew",
+      "9": "noise_skew",
+      "23": "noise_skew",
+      "26": "noise_skew",
+      "12": "noise_skew",
+      "4": "noise_skew",
+      "16": "noise_skew"
+    },
+    "shift_case": "noise_skew_noise_skew"
+  },
+  "model": "linearccp",
+  "config_name": "SF",
+  "dag_structure": "standard",
+  "device": "cpu",
+  "linearccp": {
+    "shifted_nodes": [
+      4,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      23,
+      26,
+      27,
+      28,
+      30,
+      31,
+      36,
+      40,
+      43,
+      44,
+      45,
+      46
+    ],
+    "functional_change_nodes": [
+      6,
+      11,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      27,
+      28,
+      30,
+      31,
+      36,
+      40,
+      43,
+      44,
+      45,
+      46
+    ],
+    "noise_change_nodes": [
+      4,
+      9,
+      10,
+      11,
+      12,
+      13,
+      16,
+      23,
+      26,
+      43
+    ],
+    "node_results": {
+      "1": {
+        "is_shifted": false,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 1.4022735779880195,
+          "p_value": 0.2364842640596586,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.04209114065473507
+          ],
+          "beta_env2": [
+            0.02110170804958945
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.021,
+          "p_value": 0.9802627322900355,
+          "is_noise_changed": false
+        }
+      },
+      "2": {
+        "is_shifted": false,
+        "parents": [
+          1
+        ],
+        "function_test": {
+          "f_statistic": 2.3001875306579054,
+          "p_value": 0.12951673030651312,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.1239972191381426
+          ],
+          "beta_env2": [
+            0.19049118204591176
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.019,
+          "p_value": 0.9937026761524456,
+          "is_noise_changed": false
+        }
+      },
+      "3": {
+        "is_shifted": false,
+        "parents": [
+          1
+        ],
+        "function_test": {
+          "f_statistic": 0.37746015638719743,
+          "p_value": 0.5390356833911135,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.14562649194247326
+          ],
+          "beta_env2": [
+            0.17332550111964212
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.029,
+          "p_value": 0.7946637387576738,
+          "is_noise_changed": false
+        }
+      },
+      "4": {
+        "is_shifted": true,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 3.7296817644094498,
+          "p_value": 0.05359501542202083,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.04696566518418827
+          ],
+          "beta_env2": [
+            0.039758433380186683
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.087,
+          "p_value": 0.0010264669536591562,
+          "is_noise_changed": true
+        }
+      },
+      "5": {
+        "is_shifted": false,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 0.44261956653767043,
+          "p_value": 0.5059376703739742,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.04845738396999921
+          ],
+          "beta_env2": [
+            -0.014772628670203567
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.027,
+          "p_value": 0.8595454206943325,
+          "is_noise_changed": false
+        }
+      },
+      "6": {
+        "is_shifted": true,
+        "parents": [
+          4
+        ],
+        "function_test": {
+          "f_statistic": 55.67321464932059,
+          "p_value": 1.270095140171179e-13,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.2443013252501359
+          ],
+          "beta_env2": [
+            0.6274835230115008
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.052,
+          "p_value": 0.13385273551786803,
+          "is_noise_changed": false
+        }
+      },
+      "7": {
+        "is_shifted": false,
+        "parents": [
+          1
+        ],
+        "function_test": {
+          "f_statistic": 1.6225971913850283,
+          "p_value": 0.20287833140229006,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.14561925310532303
+          ],
+          "beta_env2": [
+            0.2012145227992916
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.024,
+          "p_value": 0.9357699014782725,
+          "is_noise_changed": false
+        }
+      },
+      "8": {
+        "is_shifted": false,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 3.282819247338453,
+          "p_value": 0.07015879873668962,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.03599466872864346
+          ],
+          "beta_env2": [
+            0.05571006466077626
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.027,
+          "p_value": 0.8595454206943325,
+          "is_noise_changed": false
+        }
+      },
+      "9": {
+        "is_shifted": true,
+        "parents": [
+          5
+        ],
+        "function_test": {
+          "f_statistic": 0.07525053351808739,
+          "p_value": 0.7838684037206083,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.21951240647290404
+          ],
+          "beta_env2": [
+            0.23065797340768543
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.097,
+          "p_value": 0.00016232041211307663,
+          "is_noise_changed": true
+        }
+      },
+      "10": {
+        "is_shifted": true,
+        "parents": [
+          3
+        ],
+        "function_test": {
+          "f_statistic": 0.3220316034881351,
+          "p_value": 0.5704530945607147,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.21716984576863632
+          ],
+          "beta_env2": [
+            0.2383394582571908
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.104,
+          "p_value": 3.9587400002181794e-05,
+          "is_noise_changed": true
+        }
+      },
+      "11": {
+        "is_shifted": true,
+        "parents": [
+          10
+        ],
+        "function_test": {
+          "f_statistic": 24.347618253456563,
+          "p_value": 8.709141582352586e-07,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.29343961811655006
+          ],
+          "beta_env2": [
+            0.5201222745008417
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.126,
+          "p_value": 2.461977466455732e-07,
+          "is_noise_changed": true
+        }
+      },
+      "12": {
+        "is_shifted": true,
+        "parents": [
+          1
+        ],
+        "function_test": {
+          "f_statistic": 2.5540489981235606,
+          "p_value": 0.1101702737292205,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.12140658070700064
+          ],
+          "beta_env2": [
+            0.18345432277379012
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.109,
+          "p_value": 1.3598954602798138e-05,
+          "is_noise_changed": true
+        }
+      },
+      "13": {
+        "is_shifted": true,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 0.14709530257034648,
+          "p_value": 0.701367636318015,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.0001877093134666558
+          ],
+          "beta_env2": [
+            0.01738544003846993
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.105,
+          "p_value": 3.209982841805882e-05,
+          "is_noise_changed": true
+        }
+      },
+      "14": {
+        "is_shifted": true,
+        "parents": [
+          12
+        ],
+        "function_test": {
+          "f_statistic": 29.672878382931,
+          "p_value": 5.746364128977888e-08,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.30842319847764377
+          ],
+          "beta_env2": [
+            0.579981122430377
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.036,
+          "p_value": 0.5362766985932181,
+          "is_noise_changed": false
+        }
+      },
+      "15": {
+        "is_shifted": false,
+        "parents": [
+          3
+        ],
+        "function_test": {
+          "f_statistic": 0.13867730527069064,
+          "p_value": 0.7096390412540656,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.23683696160790177
+          ],
+          "beta_env2": [
+            0.25315051379228376
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.019,
+          "p_value": 0.9937026761524456,
+          "is_noise_changed": false
+        }
+      },
+      "16": {
+        "is_shifted": true,
+        "parents": [
+          11
+        ],
+        "function_test": {
+          "f_statistic": 24.388500224020607,
+          "p_value": 8.528452054568092e-07,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.2053105754904575
+          ],
+          "beta_env2": [
+            0.42096115441309995
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.108,
+          "p_value": 1.690722046468961e-05,
+          "is_noise_changed": true
+        }
+      },
+      "17": {
+        "is_shifted": true,
+        "parents": [
+          12
+        ],
+        "function_test": {
+          "f_statistic": 39.24306150189834,
+          "p_value": 4.570563927330795e-10,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.25291893170014423
+          ],
+          "beta_env2": [
+            0.5775152542490894
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.051,
+          "p_value": 0.14836452078962484,
+          "is_noise_changed": false
+        }
+      },
+      "18": {
+        "is_shifted": true,
+        "parents": [
+          10
+        ],
+        "function_test": {
+          "f_statistic": 33.808056239949266,
+          "p_value": 7.066036533664999e-09,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.2586525619097421
+          ],
+          "beta_env2": [
+            0.5566578510352713
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.03,
+          "p_value": 0.7593695685682871,
+          "is_noise_changed": false
+        }
+      },
+      "19": {
+        "is_shifted": true,
+        "parents": [
+          10
+        ],
+        "function_test": {
+          "f_statistic": 12.797288742376928,
+          "p_value": 0.0003553920233380081,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.3679576708293713
+          ],
+          "beta_env2": [
+            0.5507108280602869
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.038,
+          "p_value": 0.4659595288557257,
+          "is_noise_changed": false
+        }
+      },
+      "20": {
+        "is_shifted": true,
+        "parents": [
+          11
+        ],
+        "function_test": {
+          "f_statistic": 3.8795515582179436,
+          "p_value": 0.04901569523499116,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.2592981621269297
+          ],
+          "beta_env2": [
+            0.3581653913351303
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.034,
+          "p_value": 0.6101664688189142,
+          "is_noise_changed": false
+        }
+      },
+      "21": {
+        "is_shifted": false,
+        "parents": [
+          3
+        ],
+        "function_test": {
+          "f_statistic": 0.0009194469520631051,
+          "p_value": 0.975812976666282,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.23562221062077493
+          ],
+          "beta_env2": [
+            0.2343009053412705
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.029,
+          "p_value": 0.7946637387576738,
+          "is_noise_changed": false
+        }
+      },
+      "22": {
+        "is_shifted": false,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 0.07615166134533444,
+          "p_value": 0.7826105017446725,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.009456908810591734
+          ],
+          "beta_env2": [
+            0.0042775796898393715
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.035,
+          "p_value": 0.5728904395829821,
+          "is_noise_changed": false
+        }
+      },
+      "23": {
+        "is_shifted": true,
+        "parents": [
+          15
+        ],
+        "function_test": {
+          "f_statistic": 0.2922260052517061,
+          "p_value": 0.5888578875799064,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.2205212818854786
+          ],
+          "beta_env2": [
+            0.24204619446582748
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.096,
+          "p_value": 0.0001969751018672361,
+          "is_noise_changed": true
+        }
+      },
+      "24": {
+        "is_shifted": false,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 1.246981524804552,
+          "p_value": 0.2642641778807362,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.04888481994982168
+          ],
+          "beta_env2": [
+            0.00778278388062365
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.034,
+          "p_value": 0.6101664688189142,
+          "is_noise_changed": false
+        }
+      },
+      "25": {
+        "is_shifted": false,
+        "parents": [
+          20
+        ],
+        "function_test": {
+          "f_statistic": 1.1254379030648605,
+          "p_value": 0.28887888584772237,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.21523244321883336
+          ],
+          "beta_env2": [
+            0.26042777404713613
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.025,
+          "p_value": 0.9136894237272155,
+          "is_noise_changed": false
+        }
+      },
+      "26": {
+        "is_shifted": true,
+        "parents": [
+          22
+        ],
+        "function_test": {
+          "f_statistic": 0.008093367133835811,
+          "p_value": 0.9283255295921023,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.219056896083741
+          ],
+          "beta_env2": [
+            0.22275650032488017
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.107,
+          "p_value": 2.0977827855404345e-05,
+          "is_noise_changed": true
+        }
+      },
+      "27": {
+        "is_shifted": true,
+        "parents": [
+          4
+        ],
+        "function_test": {
+          "f_statistic": 29.263863124472955,
+          "p_value": 7.074752728097877e-08,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.2621783518804294
+          ],
+          "beta_env2": [
+            0.5467651409027122
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.048,
+          "p_value": 0.19957365535779528,
+          "is_noise_changed": false
+        }
+      },
+      "28": {
+        "is_shifted": true,
+        "parents": [
+          26
+        ],
+        "function_test": {
+          "f_statistic": 41.84654424133294,
+          "p_value": 1.2383138958682594e-10,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.21885067754526638
+          ],
+          "beta_env2": [
+            0.5466074150437549
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.048,
+          "p_value": 0.19957365535779528,
+          "is_noise_changed": false
+        }
+      },
+      "29": {
+        "is_shifted": false,
+        "parents": [
+          19
+        ],
+        "function_test": {
+          "f_statistic": 3.817618797083797,
+          "p_value": 0.05085575576942036,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.20267537223892126
+          ],
+          "beta_env2": [
+            0.2876765706558067
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.023,
+          "p_value": 0.9542189106778983,
+          "is_noise_changed": false
+        }
+      },
+      "30": {
+        "is_shifted": true,
+        "parents": [
+          11
+        ],
+        "function_test": {
+          "f_statistic": 7.03267111576449,
+          "p_value": 0.008066940110169729,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.2472950141080057
+          ],
+          "beta_env2": [
+            0.3759707574883102
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.053,
+          "p_value": 0.12051526066065596,
+          "is_noise_changed": false
+        }
+      },
+      "31": {
+        "is_shifted": true,
+        "parents": [
+          12
+        ],
+        "function_test": {
+          "f_statistic": 71.53904890791576,
+          "p_value": 1.1102230246251565e-16,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.21784420928926174
+          ],
+          "beta_env2": [
+            0.6481675108991084
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.036,
+          "p_value": 0.5362766985932181,
+          "is_noise_changed": false
+        }
+      },
+      "32": {
+        "is_shifted": false,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 1.456465063086947,
+          "p_value": 0.2276364107043921,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.0022489147729055675
+          ],
+          "beta_env2": [
+            0.0630739476520257
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.043,
+          "p_value": 0.3136800387320582,
+          "is_noise_changed": false
+        }
+      },
+      "33": {
+        "is_shifted": false,
+        "parents": [
+          20
+        ],
+        "function_test": {
+          "f_statistic": 0.061646261961933665,
+          "p_value": 0.8039381662656124,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.23266466230431437
+          ],
+          "beta_env2": [
+            0.2431245484772177
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.039,
+          "p_value": 0.43260886958153144,
+          "is_noise_changed": false
+        }
+      },
+      "34": {
+        "is_shifted": false,
+        "parents": [
+          29
+        ],
+        "function_test": {
+          "f_statistic": 2.1050627405408044,
+          "p_value": 0.14696945373593073,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.27634874270316273
+          ],
+          "beta_env2": [
+            0.2149716252226493
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.033,
+          "p_value": 0.647814872077161,
+          "is_noise_changed": false
+        }
+      },
+      "35": {
+        "is_shifted": false,
+        "parents": [
+          27
+        ],
+        "function_test": {
+          "f_statistic": 0.32539295680252434,
+          "p_value": 0.5684487640665297,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.27079559435130307
+          ],
+          "beta_env2": [
+            0.29574675534671774
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.024,
+          "p_value": 0.9357699014782725,
+          "is_noise_changed": false
+        }
+      },
+      "36": {
+        "is_shifted": true,
+        "parents": [
+          13
+        ],
+        "function_test": {
+          "f_statistic": 11.764321129739823,
+          "p_value": 0.0006160474164675911,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.3092267008308316
+          ],
+          "beta_env2": [
+            0.4891393449225462
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.039,
+          "p_value": 0.43260886958153144,
+          "is_noise_changed": false
+        }
+      },
+      "37": {
+        "is_shifted": false,
+        "parents": [
+          36
+        ],
+        "function_test": {
+          "f_statistic": 0.003658263147330245,
+          "p_value": 0.9517765502560345,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.2653824172564165
+          ],
+          "beta_env2": [
+            0.2680513210904568
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.025,
+          "p_value": 0.9136894237272155,
+          "is_noise_changed": false
+        }
+      },
+      "38": {
+        "is_shifted": false,
+        "parents": [
+          32
+        ],
+        "function_test": {
+          "f_statistic": 0.9272732999245563,
+          "p_value": 0.3356891031985163,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.2086642739938696
+          ],
+          "beta_env2": [
+            0.16458135180335284
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.031,
+          "p_value": 0.7228251828701066,
+          "is_noise_changed": false
+        }
+      },
+      "39": {
+        "is_shifted": false,
+        "parents": [
+          17
+        ],
+        "function_test": {
+          "f_statistic": 1.3879930592118725,
+          "p_value": 0.2388847558051329,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.2411983037275182
+          ],
+          "beta_env2": [
+            0.2919897171464542
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.03,
+          "p_value": 0.7593695685682871,
+          "is_noise_changed": false
+        }
+      },
+      "40": {
+        "is_shifted": true,
+        "parents": [
+          28
+        ],
+        "function_test": {
+          "f_statistic": 6.069520599031296,
+          "p_value": 0.013837218659228268,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.3424937053406863
+          ],
+          "beta_env2": [
+            0.23771020458528008
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.032,
+          "p_value": 0.6854967337920594,
+          "is_noise_changed": false
+        }
+      },
+      "41": {
+        "is_shifted": false,
+        "parents": [
+          38
+        ],
+        "function_test": {
+          "f_statistic": 1.1068813443576861,
+          "p_value": 0.29288823078907267,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.2410416920786314
+          ],
+          "beta_env2": [
+            0.2875417666051717
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.025,
+          "p_value": 0.9136894237272155,
+          "is_noise_changed": false
+        }
+      },
+      "42": {
+        "is_shifted": false,
+        "parents": [
+          3
+        ],
+        "function_test": {
+          "f_statistic": 0.0005301517819839503,
+          "p_value": 0.9816326125574107,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.23899344239453268
+          ],
+          "beta_env2": [
+            0.2400043204213961
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.039,
+          "p_value": 0.43260886958153144,
+          "is_noise_changed": false
+        }
+      },
+      "43": {
+        "is_shifted": true,
+        "parents": [
+          38
+        ],
+        "function_test": {
+          "f_statistic": 3.944785310049135,
+          "p_value": 0.04715342913551979,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.22660226328273889
+          ],
+          "beta_env2": [
+            0.30534405414623667
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.114,
+          "p_value": 4.441088228134397e-06,
+          "is_noise_changed": true
+        }
+      },
+      "44": {
+        "is_shifted": true,
+        "parents": [
+          4
+        ],
+        "function_test": {
+          "f_statistic": 42.043413936452765,
+          "p_value": 1.1220346873841436e-10,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.22103270866607397
+          ],
+          "beta_env2": [
+            0.5497905923917515
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.05,
+          "p_value": 0.16411447756429137,
+          "is_noise_changed": false
+        }
+      },
+      "45": {
+        "is_shifted": true,
+        "parents": [
+          10
+        ],
+        "function_test": {
+          "f_statistic": 17.778695647539983,
+          "p_value": 2.592318250704828e-05,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.2902485343683537
+          ],
+          "beta_env2": [
+            0.5089500434544041
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.027,
+          "p_value": 0.8595454206943325,
+          "is_noise_changed": false
+        }
+      },
+      "46": {
+        "is_shifted": true,
+        "parents": [
+          12
+        ],
+        "function_test": {
+          "f_statistic": 51.46198478035666,
+          "p_value": 1.0242917625191694e-12,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.23426697735675137
+          ],
+          "beta_env2": [
+            0.5895138765040495
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.04,
+          "p_value": 0.4006338815832625,
+          "is_noise_changed": false
+        }
+      },
+      "47": {
+        "is_shifted": false,
+        "parents": [
+          38
+        ],
+        "function_test": {
+          "f_statistic": 0.4012869440688236,
+          "p_value": 0.5264979494902025,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.22522692271490072
+          ],
+          "beta_env2": [
+            0.253023388137629
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.03,
+          "p_value": 0.7593695685682871,
+          "is_noise_changed": false
+        }
+      },
+      "48": {
+        "is_shifted": false,
+        "parents": [
+          39
+        ],
+        "function_test": {
+          "f_statistic": 0.023028807270629014,
+          "p_value": 0.8793975200703895,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.26970900173555235
+          ],
+          "beta_env2": [
+            0.27607999946093037
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.038,
+          "p_value": 0.4659595288557257,
+          "is_noise_changed": false
+        }
+      },
+      "49": {
+        "is_shifted": false,
+        "parents": [
+          2
+        ],
+        "function_test": {
+          "f_statistic": 1.5252966448647511,
+          "p_value": 0.2169650665433076,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.23499722019349045
+          ],
+          "beta_env2": [
+            0.29103113086219445
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.029,
+          "p_value": 0.7946637387576738,
+          "is_noise_changed": false
+        }
+      }
+    },
+    "metrics": {
+      "true_positives": [
+        4,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16,
+        23,
+        26,
+        43
+      ],
+      "false_positives": [
+        6,
+        14,
+        17,
+        18,
+        19,
+        20,
+        27,
+        28,
+        30,
+        31,
+        36,
+        40,
+        44,
+        45,
+        46
+      ],
+      "false_negatives": [],
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1_score": 0.5714285714285715
+    }
+  }
+}

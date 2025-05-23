@@ -1,0 +1,242 @@
+{
+  "dataset_info": {
+    "seed": 83,
+    "dataset_index": 12,
+    "node_count": 10,
+    "edge_count": 10,
+    "graph_type": "SF",
+    "shifted_nodes": [
+      9,
+      2
+    ],
+    "shift_types": {
+      "9": "noise_skew",
+      "2": "noise_skew"
+    },
+    "shift_case": "noise_skew_noise_skew"
+  },
+  "model": "fans",
+  "config_name": "SF",
+  "dag_structure": "standard",
+  "device": "cuda:0",
+  "fans": {
+    "true_shifted_nodes": [
+      9,
+      2
+    ],
+    "detected_shifted_nodes": [
+      2,
+      9
+    ],
+    "detected_shifted_nodes_prob_log": [
+      2,
+      9
+    ],
+    "detected_shifted_nodes_prob": [
+      0.36110879644642613,
+      0.36184339396866694
+    ],
+    "detected_shifted_nodes_x": [
+      {
+        "node": 1,
+        "avg_js": 0.0381226690656643,
+        "shift_detected": false
+      },
+      {
+        "node": 2,
+        "avg_js": 0.36110879644642613,
+        "shift_detected": true
+      },
+      {
+        "node": 3,
+        "avg_js": 0.040456603604038514,
+        "shift_detected": false
+      },
+      {
+        "node": 4,
+        "avg_js": 0.05163218826944387,
+        "shift_detected": false
+      },
+      {
+        "node": 5,
+        "avg_js": 0.05192899166134746,
+        "shift_detected": false
+      },
+      {
+        "node": 6,
+        "avg_js": 0.045905534067981174,
+        "shift_detected": false
+      },
+      {
+        "node": 7,
+        "avg_js": 0.04134599063798716,
+        "shift_detected": false
+      },
+      {
+        "node": 8,
+        "avg_js": 0.04668073344808992,
+        "shift_detected": false
+      },
+      {
+        "node": 9,
+        "avg_js": 0.36184339396866694,
+        "shift_detected": true
+      }
+    ],
+    "node_js_details": {
+      "X1|pa(X1)": {
+        "quantile_js_values": [
+          0.03812266754981983,
+          0.038122668916877454,
+          0.038122670730295606
+        ],
+        "avg_js_divergence": 0.0381226690656643,
+        "shift_detected": false,
+        "node_idx": 1
+      },
+      "X2|pa(X2)": {
+        "quantile_js_values": [
+          0.36110879791729533,
+          0.36110879648604155,
+          0.3611087949359415
+        ],
+        "avg_js_divergence": 0.36110879644642613,
+        "shift_detected": true,
+        "node_idx": 2
+      },
+      "X3|pa(X3)": {
+        "quantile_js_values": [
+          0.03813527355300116,
+          0.040570776281714384,
+          0.04266376097739999
+        ],
+        "avg_js_divergence": 0.040456603604038514,
+        "shift_detected": false,
+        "node_idx": 3
+      },
+      "X4|pa(X4)": {
+        "quantile_js_values": [
+          0.051632186501050684,
+          0.051632189625393565,
+          0.051632188681887355
+        ],
+        "avg_js_divergence": 0.05163218826944387,
+        "shift_detected": false,
+        "node_idx": 4
+      },
+      "X5|pa(X5)": {
+        "quantile_js_values": [
+          0.05047021068108886,
+          0.0517134788146721,
+          0.05360328548828141
+        ],
+        "avg_js_divergence": 0.05192899166134746,
+        "shift_detected": false,
+        "node_idx": 5
+      },
+      "X6|pa(X6)": {
+        "quantile_js_values": [
+          0.04590553375354627,
+          0.045905535853883114,
+          0.045905532596514136
+        ],
+        "avg_js_divergence": 0.045905534067981174,
+        "shift_detected": false,
+        "node_idx": 6
+      },
+      "X7|pa(X7)": {
+        "quantile_js_values": [
+          0.043223966152776704,
+          0.04083548663031311,
+          0.03997851913087166
+        ],
+        "avg_js_divergence": 0.04134599063798716,
+        "shift_detected": false,
+        "node_idx": 7
+      },
+      "X8|pa(X8)": {
+        "quantile_js_values": [
+          0.04668073445484988,
+          0.046680731828565365,
+          0.04668073406085451
+        ],
+        "avg_js_divergence": 0.04668073344808992,
+        "shift_detected": false,
+        "node_idx": 8
+      },
+      "X9|pa(X9)": {
+        "quantile_js_values": [
+          0.36168277824110995,
+          0.361904949554895,
+          0.36194245410999587
+        ],
+        "avg_js_divergence": 0.36184339396866694,
+        "shift_detected": true,
+        "node_idx": 9
+      }
+    },
+    "shifted_nodes_independence": {
+      "correctly_detected": {
+        "nodes": [
+          9,
+          2
+        ],
+        "independence_results": {
+          "node_results": {
+            "9": {
+              "node_idx": 9,
+              "parent_count": 1,
+              "dependent_parents": [],
+              "independent_parents": [
+                1
+              ],
+              "dependent_ratio": 0.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 1,
+                  "spearman": {
+                    "correlation": 0.01004023004023004,
+                    "p_value": 0.751159499313117,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                }
+              ]
+            },
+            "2": {
+              "node_idx": 2,
+              "parent_count": 1,
+              "dependent_parents": [],
+              "independent_parents": [
+                0
+              ],
+              "dependent_ratio": 0.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 0,
+                  "spearman": {
+                    "correlation": 0.006106722106722107,
+                    "p_value": 0.8470593871809141,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                }
+              ]
+            }
+          },
+          "avg_dependent_ratio": 0.0,
+          "node_count": 2
+        },
+        "avg_dependent_ratio": 0.0
+      },
+      "missed_nodes": {
+        "nodes": [],
+        "independence_results": {
+          "node_results": {},
+          "avg_dependent_ratio": 0
+        },
+        "avg_dependent_ratio": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "dataset_info": {
+    "seed": 52,
+    "dataset_index": 11,
+    "node_count": 10,
+    "edge_count": 10,
+    "graph_type": "ER",
+    "shifted_nodes": [
+      5,
+      7
+    ],
+    "shift_types": {
+      "5": "noise_std",
+      "7": "noise_std"
+    },
+    "shift_case": "noise_std_noise_std"
+  },
+  "model": "linearccp",
+  "config_name": "ER",
+  "dag_structure": "standard",
+  "device": "cpu",
+  "linearccp": {
+    "shifted_nodes": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "functional_change_nodes": [
+      6,
+      8
+    ],
+    "noise_change_nodes": [
+      5,
+      7
+    ],
+    "node_results": {
+      "5": {
+        "is_shifted": true,
+        "parents": [
+          0,
+          2
+        ],
+        "function_test": {
+          "f_statistic": 0.31111986599689556,
+          "p_value": 0.7326616112908259,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.021984263396303085,
+            -0.029313067307999856
+          ],
+          "beta_env2": [
+            0.010361575665707433,
+            0.010290081737121993
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.063,
+          "p_value": 0.03776014017220749,
+          "is_noise_changed": true
+        }
+      },
+      "6": {
+        "is_shifted": true,
+        "parents": [
+          0,
+          1,
+          5
+        ],
+        "function_test": {
+          "f_statistic": 9.281527013327038,
+          "p_value": 4.283247766356801e-06,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.3002793132722948,
+            0.15495959966508602,
+            0.36239769199490834
+          ],
+          "beta_env2": [
+            0.2636883492664209,
+            0.1475783622180462,
+            0.12107251343533895
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.023,
+          "p_value": 0.9542189106778983,
+          "is_noise_changed": false
+        }
+      },
+      "7": {
+        "is_shifted": true,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 0.9569205963884231,
+          "p_value": 0.32808249801266687,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.033692292161135014
+          ],
+          "beta_env2": [
+            0.024183385273200932
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.068,
+          "p_value": 0.01960232095219542,
+          "is_noise_changed": true
+        }
+      },
+      "8": {
+        "is_shifted": true,
+        "parents": [
+          1,
+          2,
+          7
+        ],
+        "function_test": {
+          "f_statistic": 3.210927826912536,
+          "p_value": 0.02216946127523023,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.07904662746373982,
+            0.07023415314097942,
+            0.20199060148767084
+          ],
+          "beta_env2": [
+            -0.004778791414205247,
+            0.15212800231414225,
+            0.07412430194146191
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.035,
+          "p_value": 0.5728904395829821,
+          "is_noise_changed": false
+        }
+      },
+      "9": {
+        "is_shifted": false,
+        "parents": [
+          1
+        ],
+        "function_test": {
+          "f_statistic": 0.35469904710582695,
+          "p_value": 0.5515326112522503,
+          "is_function_changed": false,
+          "beta_env1": [
+            -0.06428997967576619
+          ],
+          "beta_env2": [
+            -0.034836563040252795
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.029,
+          "p_value": 0.7946637387576738,
+          "is_noise_changed": false
+        }
+      }
+    },
+    "metrics": {
+      "true_positives": [
+        5,
+        7
+      ],
+      "false_positives": [
+        6,
+        8
+      ],
+      "false_negatives": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1_score": 0.6666666666666666
+    }
+  }
+}

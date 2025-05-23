@@ -1,0 +1,242 @@
+{
+  "dataset_info": {
+    "seed": 95,
+    "dataset_index": 24,
+    "node_count": 10,
+    "edge_count": 10,
+    "graph_type": "SF",
+    "shifted_nodes": [
+      9,
+      8
+    ],
+    "shift_types": {
+      "9": "noise_skew",
+      "8": "noise_skew"
+    },
+    "shift_case": "noise_skew_noise_skew"
+  },
+  "model": "fans",
+  "config_name": "SF",
+  "dag_structure": "standard",
+  "device": "cuda:0",
+  "fans": {
+    "true_shifted_nodes": [
+      9,
+      8
+    ],
+    "detected_shifted_nodes": [
+      8,
+      9
+    ],
+    "detected_shifted_nodes_prob_log": [
+      8,
+      9
+    ],
+    "detected_shifted_nodes_prob": [
+      0.36584653985765886,
+      0.3500608886271728
+    ],
+    "detected_shifted_nodes_x": [
+      {
+        "node": 1,
+        "avg_js": 0.03679490711622127,
+        "shift_detected": false
+      },
+      {
+        "node": 2,
+        "avg_js": 0.023450101894804547,
+        "shift_detected": false
+      },
+      {
+        "node": 3,
+        "avg_js": 0.036560008854975595,
+        "shift_detected": false
+      },
+      {
+        "node": 4,
+        "avg_js": 0.057112805479102406,
+        "shift_detected": false
+      },
+      {
+        "node": 5,
+        "avg_js": 0.03609572875094744,
+        "shift_detected": false
+      },
+      {
+        "node": 6,
+        "avg_js": 0.05690912747818926,
+        "shift_detected": false
+      },
+      {
+        "node": 7,
+        "avg_js": 0.05336777790525557,
+        "shift_detected": false
+      },
+      {
+        "node": 8,
+        "avg_js": 0.36584653985765886,
+        "shift_detected": true
+      },
+      {
+        "node": 9,
+        "avg_js": 0.3500608886271728,
+        "shift_detected": true
+      }
+    ],
+    "node_js_details": {
+      "X1|pa(X1)": {
+        "quantile_js_values": [
+          0.03679491162832877,
+          0.03679490287938242,
+          0.03679490684095262
+        ],
+        "avg_js_divergence": 0.03679490711622127,
+        "shift_detected": false,
+        "node_idx": 1
+      },
+      "X2|pa(X2)": {
+        "quantile_js_values": [
+          0.023537259430943775,
+          0.023632656551478944,
+          0.023180389701990923
+        ],
+        "avg_js_divergence": 0.023450101894804547,
+        "shift_detected": false,
+        "node_idx": 2
+      },
+      "X3|pa(X3)": {
+        "quantile_js_values": [
+          0.033021139885873005,
+          0.037146012936200956,
+          0.039512873742852825
+        ],
+        "avg_js_divergence": 0.036560008854975595,
+        "shift_detected": false,
+        "node_idx": 3
+      },
+      "X4|pa(X4)": {
+        "quantile_js_values": [
+          0.059104468089600716,
+          0.05643442957811633,
+          0.05579951876959016
+        ],
+        "avg_js_divergence": 0.057112805479102406,
+        "shift_detected": false,
+        "node_idx": 4
+      },
+      "X5|pa(X5)": {
+        "quantile_js_values": [
+          0.037590135891996335,
+          0.03742218612632853,
+          0.033274864234517455
+        ],
+        "avg_js_divergence": 0.03609572875094744,
+        "shift_detected": false,
+        "node_idx": 5
+      },
+      "X6|pa(X6)": {
+        "quantile_js_values": [
+          0.05588792843533069,
+          0.05621790302599524,
+          0.05862155097324184
+        ],
+        "avg_js_divergence": 0.05690912747818926,
+        "shift_detected": false,
+        "node_idx": 6
+      },
+      "X7|pa(X7)": {
+        "quantile_js_values": [
+          0.05460601963083345,
+          0.05392256957246366,
+          0.05157474451246961
+        ],
+        "avg_js_divergence": 0.05336777790525557,
+        "shift_detected": false,
+        "node_idx": 7
+      },
+      "X8|pa(X8)": {
+        "quantile_js_values": [
+          0.3617203389850283,
+          0.3684091590377143,
+          0.3674101215502339
+        ],
+        "avg_js_divergence": 0.36584653985765886,
+        "shift_detected": true,
+        "node_idx": 8
+      },
+      "X9|pa(X9)": {
+        "quantile_js_values": [
+          0.35019373844812396,
+          0.350481078965511,
+          0.3495078484678832
+        ],
+        "avg_js_divergence": 0.3500608886271728,
+        "shift_detected": true,
+        "node_idx": 9
+      }
+    },
+    "shifted_nodes_independence": {
+      "correctly_detected": {
+        "nodes": [
+          8,
+          9
+        ],
+        "independence_results": {
+          "node_results": {
+            "8": {
+              "node_idx": 8,
+              "parent_count": 1,
+              "dependent_parents": [],
+              "independent_parents": [
+                3
+              ],
+              "dependent_ratio": 0.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 3,
+                  "spearman": {
+                    "correlation": -0.02318896718896719,
+                    "p_value": 0.4638751149883291,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                }
+              ]
+            },
+            "9": {
+              "node_idx": 9,
+              "parent_count": 1,
+              "dependent_parents": [
+                1
+              ],
+              "independent_parents": [],
+              "dependent_ratio": 1.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 1,
+                  "spearman": {
+                    "correlation": -0.10966645366645367,
+                    "p_value": 0.0005125630821722015,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                }
+              ]
+            }
+          },
+          "avg_dependent_ratio": 0.5,
+          "node_count": 2
+        },
+        "avg_dependent_ratio": 0.5
+      },
+      "missed_nodes": {
+        "nodes": [],
+        "independence_results": {
+          "node_results": {},
+          "avg_dependent_ratio": 0
+        },
+        "avg_dependent_ratio": 0
+      }
+    }
+  }
+}

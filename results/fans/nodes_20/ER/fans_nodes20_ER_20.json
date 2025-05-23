@@ -1,0 +1,370 @@
+{
+  "dataset_info": {
+    "seed": 121,
+    "dataset_index": 20,
+    "node_count": 20,
+    "edge_count": 20,
+    "graph_type": "ER",
+    "shifted_nodes": [
+      17,
+      18,
+      3,
+      7
+    ],
+    "shift_types": {
+      "17": "function",
+      "18": "function",
+      "3": "noise_skew",
+      "7": "noise_skew"
+    },
+    "shift_case": "function_noise_skew"
+  },
+  "model": "fans",
+  "config_name": "ER",
+  "dag_structure": "standard",
+  "device": "cuda:0",
+  "fans": {
+    "true_shifted_nodes": [
+      17,
+      18,
+      3,
+      7
+    ],
+    "detected_shifted_nodes": [
+      3,
+      7,
+      11,
+      17,
+      18
+    ],
+    "detected_shifted_nodes_prob_log": [
+      3,
+      7,
+      11,
+      17,
+      18
+    ],
+    "detected_shifted_nodes_prob": [
+      0.3474302866414454,
+      0.2923232592655702,
+      0.1359464331054795,
+      0.7535749538801602,
+      0.7202319480871949
+    ],
+    "detected_shifted_nodes_x": [
+      {
+        "node": 3,
+        "avg_js": 0.3474302866414454,
+        "shift_detected": true
+      },
+      {
+        "node": 5,
+        "avg_js": 0.06342816752179181,
+        "shift_detected": false
+      },
+      {
+        "node": 6,
+        "avg_js": 0.04289540343123239,
+        "shift_detected": false
+      },
+      {
+        "node": 7,
+        "avg_js": 0.2923232592655702,
+        "shift_detected": true
+      },
+      {
+        "node": 9,
+        "avg_js": 0.09857161010507737,
+        "shift_detected": false
+      },
+      {
+        "node": 10,
+        "avg_js": 0.02714617304664166,
+        "shift_detected": false
+      },
+      {
+        "node": 11,
+        "avg_js": 0.1359464331054795,
+        "shift_detected": true
+      },
+      {
+        "node": 12,
+        "avg_js": 0.07515792417835739,
+        "shift_detected": false
+      },
+      {
+        "node": 16,
+        "avg_js": 0.04943934585567167,
+        "shift_detected": false
+      },
+      {
+        "node": 17,
+        "avg_js": 0.7535749538801602,
+        "shift_detected": true
+      },
+      {
+        "node": 18,
+        "avg_js": 0.7202319480871949,
+        "shift_detected": true
+      }
+    ],
+    "node_js_details": {
+      "X3|pa(X3)": {
+        "quantile_js_values": [
+          0.34743028805781856,
+          0.3474302857326147,
+          0.34743028613390287
+        ],
+        "avg_js_divergence": 0.3474302866414454,
+        "shift_detected": true,
+        "node_idx": 3
+      },
+      "X5|pa(X5)": {
+        "quantile_js_values": [
+          0.06559752717500669,
+          0.06577820645503922,
+          0.058908768935329536
+        ],
+        "avg_js_divergence": 0.06342816752179181,
+        "shift_detected": false,
+        "node_idx": 5
+      },
+      "X6|pa(X6)": {
+        "quantile_js_values": [
+          0.04289540237400592,
+          0.04289540539957133,
+          0.04289540252011991
+        ],
+        "avg_js_divergence": 0.04289540343123239,
+        "shift_detected": false,
+        "node_idx": 6
+      },
+      "X7|pa(X7)": {
+        "quantile_js_values": [
+          0.28209985781316804,
+          0.28903233714561366,
+          0.3058375828379288
+        ],
+        "avg_js_divergence": 0.2923232592655702,
+        "shift_detected": true,
+        "node_idx": 7
+      },
+      "X9|pa(X9)": {
+        "quantile_js_values": [
+          0.10128612691389942,
+          0.09686021343293487,
+          0.09756848996839783
+        ],
+        "avg_js_divergence": 0.09857161010507737,
+        "shift_detected": false,
+        "node_idx": 9
+      },
+      "X10|pa(X10)": {
+        "quantile_js_values": [
+          0.027146173782275473,
+          0.027146172043017898,
+          0.02714617331463161
+        ],
+        "avg_js_divergence": 0.02714617304664166,
+        "shift_detected": false,
+        "node_idx": 10
+      },
+      "X11|pa(X11)": {
+        "quantile_js_values": [
+          0.1390741667041247,
+          0.13980492903322111,
+          0.12896020357909266
+        ],
+        "avg_js_divergence": 0.1359464331054795,
+        "shift_detected": true,
+        "node_idx": 11
+      },
+      "X12|pa(X12)": {
+        "quantile_js_values": [
+          0.0751579257011894,
+          0.07515792252740136,
+          0.07515792430648138
+        ],
+        "avg_js_divergence": 0.07515792417835739,
+        "shift_detected": false,
+        "node_idx": 12
+      },
+      "X16|pa(X16)": {
+        "quantile_js_values": [
+          0.04976834072227057,
+          0.049174135320881406,
+          0.049375561523863014
+        ],
+        "avg_js_divergence": 0.04943934585567167,
+        "shift_detected": false,
+        "node_idx": 16
+      },
+      "X17|pa(X17)": {
+        "quantile_js_values": [
+          0.7525378068409627,
+          0.755134697669457,
+          0.7530523571300609
+        ],
+        "avg_js_divergence": 0.7535749538801602,
+        "shift_detected": true,
+        "node_idx": 17
+      },
+      "X18|pa(X18)": {
+        "quantile_js_values": [
+          0.7199197416770505,
+          0.7194432224427771,
+          0.7213328801417573
+        ],
+        "avg_js_divergence": 0.7202319480871949,
+        "shift_detected": true,
+        "node_idx": 18
+      }
+    },
+    "shifted_nodes_independence": {
+      "correctly_detected": {
+        "nodes": [
+          17,
+          18,
+          3,
+          7
+        ],
+        "independence_results": {
+          "node_results": {
+            "17": {
+              "node_idx": 17,
+              "parent_count": 3,
+              "dependent_parents": [
+                0,
+                2,
+                7
+              ],
+              "independent_parents": [],
+              "dependent_ratio": 1.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 0,
+                  "spearman": {
+                    "correlation": 0.204996204996205,
+                    "p_value": 5.987063131916962e-11,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                },
+                {
+                  "parent_idx": 2,
+                  "spearman": {
+                    "correlation": 0.23141479541479543,
+                    "p_value": 1.26651081844725e-13,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                },
+                {
+                  "parent_idx": 7,
+                  "spearman": {
+                    "correlation": -0.2026946146946147,
+                    "p_value": 9.864407937250329e-11,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                }
+              ]
+            },
+            "18": {
+              "node_idx": 18,
+              "parent_count": 2,
+              "dependent_parents": [
+                13
+              ],
+              "independent_parents": [
+                5
+              ],
+              "dependent_ratio": 0.5,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 5,
+                  "spearman": {
+                    "correlation": -0.03790953790953791,
+                    "p_value": 0.23101980076378215,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                },
+                {
+                  "parent_idx": 13,
+                  "spearman": {
+                    "correlation": 0.25581853581853586,
+                    "p_value": 2.0921936021642724e-16,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                }
+              ]
+            },
+            "3": {
+              "node_idx": 3,
+              "parent_count": 1,
+              "dependent_parents": [
+                1
+              ],
+              "independent_parents": [],
+              "dependent_ratio": 1.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 1,
+                  "spearman": {
+                    "correlation": -0.11129168729168731,
+                    "p_value": 0.00042203211885796435,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                }
+              ]
+            },
+            "7": {
+              "node_idx": 7,
+              "parent_count": 2,
+              "dependent_parents": [
+                5,
+                6
+              ],
+              "independent_parents": [],
+              "dependent_ratio": 1.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 5,
+                  "spearman": {
+                    "correlation": -0.078991242991243,
+                    "p_value": 0.012464858374624702,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                },
+                {
+                  "parent_idx": 6,
+                  "spearman": {
+                    "correlation": 0.06334668334668335,
+                    "p_value": 0.045209046039994184,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                }
+              ]
+            }
+          },
+          "avg_dependent_ratio": 0.875,
+          "node_count": 4
+        },
+        "avg_dependent_ratio": 0.875
+      },
+      "missed_nodes": {
+        "nodes": [],
+        "independence_results": {
+          "node_results": {},
+          "avg_dependent_ratio": 0
+        },
+        "avg_dependent_ratio": 0
+      }
+    }
+  }
+}

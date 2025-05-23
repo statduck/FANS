@@ -1,0 +1,205 @@
+{
+  "dataset_info": {
+    "seed": 42,
+    "dataset_index": 1,
+    "node_count": 10,
+    "edge_count": 10,
+    "graph_type": "ER",
+    "shifted_nodes": [
+      6,
+      9
+    ],
+    "shift_types": {
+      "6": "function",
+      "9": "noise_std"
+    },
+    "shift_case": "function_noise_std"
+  },
+  "model": "fans",
+  "config_name": "ER",
+  "dag_structure": "standard",
+  "device": "cuda:0",
+  "fans": {
+    "true_shifted_nodes": [
+      6,
+      9
+    ],
+    "detected_shifted_nodes": [
+      6,
+      7,
+      9
+    ],
+    "detected_shifted_nodes_prob_log": [
+      6,
+      7,
+      9
+    ],
+    "detected_shifted_nodes_prob": [
+      0.6909694798557998,
+      0.11099496123106327,
+      0.22706831075471046
+    ],
+    "detected_shifted_nodes_x": [
+      {
+        "node": 5,
+        "avg_js": 0.031166978186806322,
+        "shift_detected": false
+      },
+      {
+        "node": 6,
+        "avg_js": 0.6909694798557998,
+        "shift_detected": true
+      },
+      {
+        "node": 7,
+        "avg_js": 0.11099496123106327,
+        "shift_detected": true
+      },
+      {
+        "node": 8,
+        "avg_js": 0.046665078468002115,
+        "shift_detected": false
+      },
+      {
+        "node": 9,
+        "avg_js": 0.22706831075471046,
+        "shift_detected": true
+      }
+    ],
+    "node_js_details": {
+      "X5|pa(X5)": {
+        "quantile_js_values": [
+          0.03116697986753926,
+          0.031166976724863862,
+          0.031166977968015853
+        ],
+        "avg_js_divergence": 0.031166978186806322,
+        "shift_detected": false,
+        "node_idx": 5
+      },
+      "X6|pa(X6)": {
+        "quantile_js_values": [
+          0.6909694825058869,
+          0.6909694793454284,
+          0.6909694777160839
+        ],
+        "avg_js_divergence": 0.6909694798557998,
+        "shift_detected": true,
+        "node_idx": 6
+      },
+      "X7|pa(X7)": {
+        "quantile_js_values": [
+          0.11099496303785038,
+          0.11099496096670601,
+          0.11099495968863339
+        ],
+        "avg_js_divergence": 0.11099496123106327,
+        "shift_detected": true,
+        "node_idx": 7
+      },
+      "X8|pa(X8)": {
+        "quantile_js_values": [
+          0.04321248345439399,
+          0.04723520432189258,
+          0.0495475476277198
+        ],
+        "avg_js_divergence": 0.046665078468002115,
+        "shift_detected": false,
+        "node_idx": 8
+      },
+      "X9|pa(X9)": {
+        "quantile_js_values": [
+          0.23567859722992132,
+          0.2250949502684031,
+          0.22043138476580693
+        ],
+        "avg_js_divergence": 0.22706831075471046,
+        "shift_detected": true,
+        "node_idx": 9
+      }
+    },
+    "shifted_nodes_independence": {
+      "correctly_detected": {
+        "nodes": [
+          9,
+          6
+        ],
+        "independence_results": {
+          "node_results": {
+            "9": {
+              "node_idx": 9,
+              "parent_count": 3,
+              "dependent_parents": [],
+              "independent_parents": [
+                0,
+                7,
+                8
+              ],
+              "dependent_ratio": 0.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 0,
+                  "spearman": {
+                    "correlation": 0.0378982458982459,
+                    "p_value": 0.23115886510848005,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                },
+                {
+                  "parent_idx": 7,
+                  "spearman": {
+                    "correlation": -0.02274941874941875,
+                    "p_value": 0.4723917178943823,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                },
+                {
+                  "parent_idx": 8,
+                  "spearman": {
+                    "correlation": -0.03243468843468844,
+                    "p_value": 0.3055228555154381,
+                    "significant": false
+                  },
+                  "is_dependent": false
+                }
+              ]
+            },
+            "6": {
+              "node_idx": 6,
+              "parent_count": 1,
+              "dependent_parents": [
+                1
+              ],
+              "independent_parents": [],
+              "dependent_ratio": 1.0,
+              "parent_independence_results": [
+                {
+                  "parent_idx": 1,
+                  "spearman": {
+                    "correlation": 0.29560948360948364,
+                    "p_value": 1.2901676344875316e-21,
+                    "significant": true
+                  },
+                  "is_dependent": true
+                }
+              ]
+            }
+          },
+          "avg_dependent_ratio": 0.5,
+          "node_count": 2
+        },
+        "avg_dependent_ratio": 0.5
+      },
+      "missed_nodes": {
+        "nodes": [],
+        "independence_results": {
+          "node_results": {},
+          "avg_dependent_ratio": 0
+        },
+        "avg_dependent_ratio": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "dataset_info": {
+    "seed": 57,
+    "dataset_index": 16,
+    "node_count": 10,
+    "edge_count": 10,
+    "graph_type": "ER",
+    "shifted_nodes": [
+      6,
+      8
+    ],
+    "shift_types": {
+      "6": "noise_std",
+      "8": "noise_skew"
+    },
+    "shift_case": "noise_std_noise_skew"
+  },
+  "model": "linearccp",
+  "config_name": "ER",
+  "dag_structure": "standard",
+  "device": "cpu",
+  "linearccp": {
+    "shifted_nodes": [
+      2,
+      6,
+      7,
+      8,
+      9
+    ],
+    "functional_change_nodes": [
+      2,
+      7,
+      9
+    ],
+    "noise_change_nodes": [
+      6,
+      8
+    ],
+    "node_results": {
+      "2": {
+        "is_shifted": true,
+        "parents": [
+          1
+        ],
+        "function_test": {
+          "f_statistic": 5.394687478873451,
+          "p_value": 0.0202982381714768,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.06834793170672246
+          ],
+          "beta_env2": [
+            -0.05081670770605731
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.034,
+          "p_value": 0.6101664688189142,
+          "is_noise_changed": false
+        }
+      },
+      "6": {
+        "is_shifted": true,
+        "parents": [
+          1,
+          3,
+          4
+        ],
+        "function_test": {
+          "f_statistic": 2.3824232483721857,
+          "p_value": 0.06767896946075314,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.02484382470593022,
+            0.024266211301697767,
+            -0.03628331859914029
+          ],
+          "beta_env2": [
+            -0.01949111557067551,
+            -0.14995634301777597,
+            -0.08814270824608436
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.084,
+          "p_value": 0.0017162135084044633,
+          "is_noise_changed": true
+        }
+      },
+      "7": {
+        "is_shifted": true,
+        "parents": [
+          3,
+          4,
+          6
+        ],
+        "function_test": {
+          "f_statistic": 5.814084243586316,
+          "p_value": 0.00059290271174961,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.359721707464451,
+            0.3675980111540196,
+            0.39596369071304793
+          ],
+          "beta_env2": [
+            0.21835850783127858,
+            0.36020294581614426,
+            0.23602630435213864
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.042,
+          "p_value": 0.34112475112661245,
+          "is_noise_changed": false
+        }
+      },
+      "8": {
+        "is_shifted": true,
+        "parents": [
+          0
+        ],
+        "function_test": {
+          "f_statistic": 0.02383803835986016,
+          "p_value": 0.8773133373776979,
+          "is_function_changed": false,
+          "beta_env1": [
+            0.018365651560081644
+          ],
+          "beta_env2": [
+            0.01153595919349491
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.119,
+          "p_value": 1.3787445928064639e-06,
+          "is_noise_changed": true
+        }
+      },
+      "9": {
+        "is_shifted": true,
+        "parents": [
+          6,
+          8
+        ],
+        "function_test": {
+          "f_statistic": 16.522794238755136,
+          "p_value": 7.639288801541966e-08,
+          "is_function_changed": true,
+          "beta_env1": [
+            0.192428581586179,
+            0.48408107553401164
+          ],
+          "beta_env2": [
+            0.1561663118318903,
+            0.8768028326230971
+          ]
+        },
+        "noise_test": {
+          "ks_statistic": 0.023,
+          "p_value": 0.9542189106778983,
+          "is_noise_changed": false
+        }
+      }
+    },
+    "metrics": {
+      "true_positives": [
+        6,
+        8
+      ],
+      "false_positives": [
+        2,
+        7,
+        9
+      ],
+      "false_negatives": [],
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1_score": 0.5714285714285715
+    }
+  }
+}
