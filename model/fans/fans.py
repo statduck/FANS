@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import math
 from scipy.spatial.distance import jensenshannon
 from scipy.stats import gaussian_kde
-from tabulate import tabulate
 from utils import calculate_correlation_tests
 
 def decompose_probability(model, data, dag, reference_quantiles=None, quantiles=None):
@@ -245,9 +244,10 @@ def compare_conditional_probs(model, data1, data2, dag, env1_name="Env1", env2_n
         
         if summary_data:
             print("\nQuantile-based Distribution Shift Summary:")
-            print(tabulate(summary_data, 
-                          headers=["Variable", "Avg JS Divergence", "Quantile JS Values", "Shift Detected"],
-                          tablefmt="grid"))
+            print("Variable | Avg JS Divergence | Quantile JS Values | Shift Detected")
+            print("-" * 70)
+            for row in summary_data:
+                print(f"{row[0]} | {row[1]} | {row[2]} | {row[3]}")
     
     return results
 
