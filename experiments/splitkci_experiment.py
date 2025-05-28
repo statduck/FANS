@@ -104,8 +104,8 @@ main_results_dir = f"results/SplitKCI_{timestamp}"
 os.makedirs(main_results_dir, exist_ok=True)
 
 # Define node counts and noise types
-node_counts = [10]
-noise_types = ["ER"]
+node_counts = [10, 20, 30, 40, 50]
+noise_types = ["ER", "SF"]
 
 # Process each node count
 for node_count in node_counts:

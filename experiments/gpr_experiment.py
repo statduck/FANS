@@ -43,10 +43,8 @@ print(f"Results will be saved to {main_results_dir}/")
 data_dir = "data"
 
 # Define node counts and noise types to match what's in the data folder
-# node_counts = [10, 20, 30, 40, 50]
-# noise_types = ["ER", "SF"]
-node_counts = [10]
-noise_types = ["ER"]
+node_counts = [10, 20, 30, 40, 50]
+noise_types = ["ER", "SF"]
 
 # Process each node count
 for node_count in node_counts:
