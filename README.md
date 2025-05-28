@@ -1,4 +1,4 @@
-# My Paper Title
+# Dissecting Causal Mechanism Shifts via FANS: Function And Noise Separation using Flows
 
 This repository is the official implementation of "Dissecting Causal Mechanism Shifts via FANS: Function And Noise Separation using Flows"
 
