@@ -273,7 +273,7 @@ def main():
         config.device = device
 
     # Define data directory
-    data_dir = "data_implicit"
+    data_dir = "data"
 
     # Use the node counts specified in command line arguments
     node_counts = args.nodes
