@@ -6,7 +6,6 @@ import os
 from types import SimpleNamespace
 import torch
 import scipy.stats
-from sklearn.metrics.pairwise import rbf_kernel
 from torch.utils.data import Dataset
 import yaml
 from types import SimpleNamespace

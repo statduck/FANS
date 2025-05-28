@@ -7,6 +7,9 @@ import glob
 from collections import defaultdict
 import pandas as pd
 
+# Define the path to the directory containing the JSON files
+json_dir = "results/linearccp/"
+
 def calculate_f1_score(precision, recall):
     """
     Calculate F1 score from precision and recall
@@ -298,11 +301,4 @@ def analyze_results(results_base_dir):
     print("\nResults saved to linearccp_analysis_results.csv")
 
 if __name__ == "__main__":
-    import argparse
-    
-    parser = argparse.ArgumentParser(description="Analyze LinearCCP result files")
-    parser.add_argument("--dir", type=str, default="results/linearccp",
-                      help="Results directory path")
-    
-    args = parser.parse_args()
-    analyze_results(args.dir)
+    analyze_results(json_dir)

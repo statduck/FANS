@@ -3,10 +3,8 @@ import json
 import numpy as np
 import torch
 from datetime import datetime
-from splitkci.dependence_measures import KCIMeasure
+from model.splitkci.dependence_measures import KCIMeasure
 
-# GPU settings and seed initialization
-# os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 torch.manual_seed(42)
 np.random.seed(42)
 
@@ -106,8 +104,8 @@ main_results_dir = f"results/SplitKCI_{timestamp}"
 os.makedirs(main_results_dir, exist_ok=True)
 
 # Define node counts and noise types
-node_counts = [10, 20, 30, 40, 50]
-noise_types = ["ER", "SF"]
+node_counts = [10]
+noise_types = ["ER"]
 
 # Process each node count
 for node_count in node_counts:

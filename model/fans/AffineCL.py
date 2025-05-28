@@ -1,4 +1,4 @@
-from nn import MLP4
+from model.fans.nn import MLP4
 import torch
 import torch.nn as nn
 import numpy as np

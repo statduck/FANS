@@ -7,6 +7,10 @@ import glob
 import pandas as pd
 import re # For parsing dataset index
 
+# Define the path to the directory containing the JSON files and data
+json_dir = "results/iscan/"
+data_root_dir = "data/"
+
 def calculate_f1_score(precision, recall):
     """
     Calculate F1 score from precision and recall.
@@ -262,13 +266,4 @@ def analyze_results(results_base_dir, data_root_dir_arg):
     print("\nFiltered results saved to iscan_analysis_results_filtered.csv file.")
 
 if __name__ == "__main__":
-    import argparse
-    
-    parser = argparse.ArgumentParser(description="Analyze ISCAN result files (filtered by nodes_with_parents)")
-    parser.add_argument("--dir", type=str, required=True,
-                      help="Results directory path (e.g., results/iscan)")
-    parser.add_argument("--data_root_dir", type=str, required=True,
-                        help="Root directory containing original dataset adj files (e.g., data)")
-    
-    args = parser.parse_args()
-    analyze_results(args.dir, args.data_root_dir)
+    analyze_results(json_dir, data_root_dir)

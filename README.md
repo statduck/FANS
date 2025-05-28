@@ -1,71 +1,46 @@
-# CCP Experiment Scripts
+# My Paper Title
 
-This directory contains scripts for running experiments with the DataGenerator class to analyze function and noise shifts between environments.
-
-## Scripts
-
-- `experiment_script.py`: The main script that runs multiple experiments and saves results
-- `check_functions.py`: A helper script to check if all required functions exist
-- `iscan_utils.py`: Implementation of the `f_shifted_spline` function for visualization
+This repository is the official implementation of "Dissecting Causal Mechanism Shifts via FANS: Function And Noise Separation using Flows"
 
 ## Requirements
 
-- Python 3.7+
-- NumPy
-- Matplotlib
-- SciPy
-- igraph (for DAG generation)
-- scikit-learn (for data scaling)
+To install requirements:
 
-## Usage
-
-### Running the Check Functions Script
-
-First, check if all required functions exist:
-
-```bash
-python check_functions.py
+```setup
+pip install -r requirements.txt
 ```
 
-### Running Experiments
+## Training
 
-Run the main experiment script:
+run:
 
-```bash
-python experiment_script.py
+```experimenet
+python -m experiments.experiment_script --model fans
+python -m experiments.experiment_script --model iscan
+python -m experiments.experiment_script --model linearccp
+python -m experiments.gpr_experiment
+python -m experiments.splitkci_experiment
 ```
 
-This script:
-1. Generates data with DataGenerator, using a different seed for each experiment 
-2. Trains models on both environments using fit_to_sem
-3. Compares likelihood between environments and saves node indices
-4. Refits model1 to environment 2 and saves it as model1_refitted
-5. Calculates JS divergences between different model fits
-6. Runs ISCAN's est_node_shifts function to detect shifted nodes
-7. Generates visualization of function shifts using f_shifted_spline
-8. Saves all results to the experiment_results directory
+## Analysis of Results
 
-### Output Files
+The results are saved at results directory.
+```analysis
+python analysis/analyze_fans_results.py
+python analysis/analyze_iscan_results.py
+python analysis/analyze_linearccp_results.py
+python analysis/analyze_gpr_results.py
+python analysis/analyze_splitkci_results.py
+```
 
-Results are saved to the `experiment_results` directory with the following files:
+## Results
 
-- `dag_*_timestamp.png`: DAG visualization for each experiment
-- `f_shifted_spline_*_timestamp.png`: Visualization of function shifts for Y node
-- `f_shifted_diff_*_timestamp.png`: Visualization of differences between spline fits
-- `experiment_*_timestamp.json`: Individual experiment results
-- `all_results_timestamp.json`: Aggregated results from all experiments
-- `summary_stats_timestamp.json`: Summary statistics of detection accuracy and JS divergences
+Our model achieves the following performance on :
 
-## Customization
 
-You can modify the following parameters in `experiment_script.py`:
-- `num_experiments`: Number of experiments to run
-- DataGenerator parameters (d, s0, graph_type, etc.)
-- Sample size (n)
-- Number of shifted nodes (base_num_shifted_nodes)
+>📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
 
-## Additional Notes
 
-- The Y node (node with the most parents) can have function shifts or noise shifts
-- Other nodes can only have noise shifts
-- Detection accuracy is measured by comparing the detected shifted nodes with the true shifted nodes 
+## Contributing
+
+>📋  Pick a licence and describe how to contribute to your code repository. 

@@ -3,7 +3,7 @@ import torch
 from copy import deepcopy
 from scipy.linalg import solve as scp_solve
 from warnings import warn
-from splitkci import kernels
+from model.splitkci import kernels
 
 
 def add_diag(x, val):

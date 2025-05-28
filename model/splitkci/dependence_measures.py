@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 import torch
 import numpy as np
-from splitkci import cond_mean_estimation as cme
-from splitkci import pval_computations
+from model.splitkci import cond_mean_estimation as cme
+from model.splitkci import pval_computations
 from scipy.stats import norm as norm_distr
 
 

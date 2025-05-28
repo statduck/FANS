@@ -1,24 +1,10 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-This script applies the GPR partial permutation test to detect functional changes
-on data from the data folder and saves results.
-
-Usage:
-    python gpr_experiment.py
-"""
-
 import os
 import json
 import numpy as np
 import cupy as cp
 import pandas as pd
-import matplotlib.pyplot as plt
 from datetime import datetime
-import argparse
-from tqdm import tqdm
-from gpr import partial_permutation_test  # Import our GPR implementation
+from model.gpr import partial_permutation_test  # Import our GPR implementation
 
 # Set random seeds for reproducibility
 np.random.seed(42)
@@ -57,8 +43,10 @@ print(f"Results will be saved to {main_results_dir}/")
 data_dir = "data"
 
 # Define node counts and noise types to match what's in the data folder
-node_counts = [10, 20, 30, 40, 50]
-noise_types = ["ER", "SF"]
+# node_counts = [10, 20, 30, 40, 50]
+# noise_types = ["ER", "SF"]
+node_counts = [10]
+noise_types = ["ER"]
 
 # Process each node count
 for node_count in node_counts:

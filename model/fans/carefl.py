@@ -2,13 +2,11 @@ import numpy as np
 import torch
 import torch.optim as optim
 from torch.utils.data import DataLoader, Dataset
-import torch.nn as nn
 from utils import CustomSyntheticDatasetDensity
-from AffineCL import AffineCL
-from prior import LearnableGaussian
-from nn import MLP4
-from flow import NormalizingFlowModel
-import random
+from model.fans.AffineCL import AffineCL
+from model.fans.prior import LearnableGaussian
+from model.fans.nn import MLP4
+from model.fans.flow import NormalizingFlowModel
 
 class CAREFL:
     """
