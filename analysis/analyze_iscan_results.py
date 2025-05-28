@@ -75,38 +75,35 @@ def analyze_results(results_base_dir, data_root_dir_arg):
                         data = json.load(f)
 
                     dataset_info = data.get("dataset_info", {})
-                    nodes_with_parents = set(dataset_info.get("nodes_with_parents", []))
+                    
+                    # Always load nodes_with_parents from adj file
+                    dataset_idx = get_dataset_idx_from_filename(file_name)
+                    if dataset_idx is None:
+                        print(f"Warning: Could not parse dataset index from '{file_name}'. Skipping this file.")
+                        continue
 
-                    if not nodes_with_parents:
-                        print(f"Info: 'nodes_with_parents' not found in dataset_info for '{file_name}'. Attempting dynamic load from adj file...")
-                        dataset_idx = get_dataset_idx_from_filename(file_name)
-                        if dataset_idx is None:
-                            print(f"Warning: Could not parse dataset index from '{file_name}'. Skipping this file.")
+                    adj_file_path = os.path.join(data_root_dir_arg, f"nodes_{node_count}", graph_type, f"adj_{dataset_idx}.npy")
+                    
+                    if not os.path.exists(adj_file_path):
+                        print(f"Warning: Corresponding adj file '{adj_file_path}' not found. Skipping '{file_name}' file.")
+                        continue
+                    
+                    try:
+                        adj = np.load(adj_file_path)
+                        temp_nodes_with_parents_list = []
+                        if adj is not None and adj.ndim == 2 and adj.shape[0] > 0 and adj.shape[0] == adj.shape[1]:
+                            for node_idx_loop in range(adj.shape[1]): # adj.shape[1] is number of nodes
+                                if np.sum(adj[:, node_idx_loop]) > 0: # In-degree > 0 (assuming adj[parent, child])
+                                    temp_nodes_with_parents_list.append(int(node_idx_loop))
+                            nodes_with_parents = set(temp_nodes_with_parents_list)
+                            if not nodes_with_parents:
+                                 print(f"Info: 'nodes_with_parents' is empty for '{file_name}' (e.g., graph with no edges).")
+                        else:
+                            print(f"Warning: Loaded adj file '{adj_file_path}' has incorrect format or is empty. Skipping '{file_name}' file.")
                             continue
-
-                        adj_file_path = os.path.join(data_root_dir_arg, f"nodes_{node_count}", graph_type, f"adj_{dataset_idx}.npy")
-                        
-                        if not os.path.exists(adj_file_path):
-                            print(f"Warning: Corresponding adj file '{adj_file_path}' not found. Skipping '{file_name}' file.")
-                            continue
-                        
-                        try:
-                            adj = np.load(adj_file_path)
-                            temp_nodes_with_parents_list = []
-                            if adj is not None and adj.ndim == 2 and adj.shape[0] > 0 and adj.shape[0] == adj.shape[1]:
-                                for node_idx_loop in range(adj.shape[1]): # adj.shape[1] is number of nodes
-                                    if np.sum(adj[:, node_idx_loop]) > 0: # In-degree > 0 (assuming adj[parent, child])
-                                        temp_nodes_with_parents_list.append(int(node_idx_loop))
-                                nodes_with_parents = set(temp_nodes_with_parents_list)
-                                print(f"Info: Dynamically loaded 'nodes_with_parents' from '{adj_file_path}': {len(nodes_with_parents)} nodes.")
-                                if not nodes_with_parents:
-                                     print(f"Info: Dynamically loaded 'nodes_with_parents' is empty for '{file_name}' (e.g., graph with no edges).")
-                            else:
-                                print(f"Warning: Loaded adj file '{adj_file_path}' has incorrect format or is empty. Skipping '{file_name}' file.")
-                                continue
-                        except Exception as e_load_adj:
-                            print(f"Warning: Error loading adj file '{adj_file_path}': {e_load_adj}. Skipping '{file_name}' file.")
-                            continue
+                    except Exception as e_load_adj:
+                        print(f"Warning: Error loading adj file '{adj_file_path}': {e_load_adj}. Skipping '{file_name}' file.")
+                        continue
                     
                     if "iscan" not in data:
                         print(f"Warning: No iscan results in {file_name}. Skipping.")
@@ -129,7 +126,7 @@ def analyze_results(results_base_dir, data_root_dir_arg):
                             if ratio >= 1.0:
                                 detected_shifted_original.add(int(node_str))
                     
-                    # Filter by nodes_with_parents (either from JSON or dynamically loaded)
+                    # Filter by nodes_with_parents (dynamically loaded)
                     true_shifted = true_shifted_original.intersection(nodes_with_parents)
                     detected_shifted = detected_shifted_original.intersection(nodes_with_parents)
 
