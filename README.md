@@ -44,4 +44,4 @@ Our model achieves the following performance on :
 
 ## Contributing
 
-If you'd like to contribute, or have any suggestions for the code, you can contact us at gd.seo@yonsei.ac.kr or open an issue on this GitHub repository.
+If you'd like to contribute, or have any suggestions for the code, you can open an issue on this GitHub repository.
