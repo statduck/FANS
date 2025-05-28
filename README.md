@@ -37,10 +37,11 @@ python analysis/analyze_splitkci_results.py
 
 Our model achieves the following performance on :
 
+![image](https://github.com/user-attachments/assets/e93b1074-62a4-44d9-98df-84e5ed1f48d0)
 
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+![image](https://github.com/user-attachments/assets/19cfe614-f3d4-4479-baa1-1030a79a7958)
 
 
 ## Contributing
 
->📋  Pick a licence and describe how to contribute to your code repository. 
+If you'd like to contribute, or have any suggestions for the code, you can contact us at gd.seo@yonsei.ac.kr or open an issue on this GitHub repository.
